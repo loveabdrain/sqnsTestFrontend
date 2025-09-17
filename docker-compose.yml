@@ -7,6 +7,6 @@ services:
     ports:
       - "8080:80"
     volumes:
-      - ./dist:/usr/share/nginx/html  # Монтируем собранный Vue
-      - ./nginx/conf.d:/etc/nginx/conf.d  # Монтируем наш конфиг
+      - ./dist:/usr/share/nginx/html
+      - ./nginx/conf.d:/etc/nginx/conf.d
     restart: unless-stopped
