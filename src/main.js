@@ -10,6 +10,8 @@ import Auth from './components/auth.vue'
 import PrivacyPolicy from './components/privacyPolicy.vue'
 import Profile from './components/profile.vue'
 import Reviews from './components/reviews/reviews.vue'
+import PasswordRecovery from './components/passwords/passwordRecovery.vue'
+import PasswordReset from './components/passwords/passwordReset.vue'
 
 const router = createRouter({
     history: createWebHistory(),
@@ -42,6 +44,18 @@ const router = createRouter({
             name: 'Reviews',
             path: '/reviews',
             component: Reviews,
+            meta: { requiresAuth: false }
+        },
+        {
+            name: 'PasswordRecovery',
+            path: '/password-recovery',
+            component: PasswordRecovery,
+            meta: { requiresAuth: false }
+        },
+        {
+            name: 'PasswordReset',
+            path: '/password-reset/:token',
+            component: PasswordReset,
             meta: { requiresAuth: false }
         },
     ]
