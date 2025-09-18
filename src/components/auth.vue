@@ -16,7 +16,7 @@
           <label class="field--label">Пароль</label>
           <div class="field--data with-image">
             <input id="password" type="password" v-model="formAuth.password">
-            <span id="passwordEye" class="private" onclick="showPassword('password')"></span>
+            <span id="passwordEye" class="private" v-on:click="showPassword('password')"></span>
           </div>
         </div>
         <span v-if="error" class="text-danger error" v-text="error" />
